@@ -10,9 +10,32 @@
  */
 void print(void *base, size_t nitems, size_t size, int (*prt)(const void *));
 
+/**
+ * @brief Imprime datos tipo entero
+ * @param vec Direccion del elemento a imprimir
+ * @return Valor sin uso, 0
+ */
 int printInt(const void *vec);
+
+/**
+ * @brief Imprime datos tipo flotante
+ * @param vec Direccion del elemento a imprimir
+ * @return Valor sin uso, 0
+ */
 int printFloat(const void *vec);
+
+/**
+ * @brief Imprime datos tipo matriz de char
+ * @param vec Direccion del elemento a imprimir
+ * @return Valor sin uso, 0
+ */
 int printMat(const void *vec);
+
+/**
+ * @brief Imprime datos tipo char*
+ * @param vec Direccion del elemento a imprimir
+ * @return Valor sin uso, 0
+ */
 int printString(const void *vec);
 
 #endif
