@@ -10,4 +10,9 @@
  */
 void print(void *base, size_t nitems, size_t size, int (*prt)(const void *));
 
+int printInt(const void *vec);
+int printFloat(const void *vec);
+int printMat(const void *vec);
+int printString(const void *vec);
+
 #endif
