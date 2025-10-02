@@ -1,6 +1,7 @@
 #ifndef __IMPRVEC_H
 #define __IMPRVEC_H
 
+#include <stdlib.h>
 /**
  * @brief Imprime cualquier tipo de array
  * @param base Puntero al primer elemento del array a imprimir.

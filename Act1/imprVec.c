@@ -3,13 +3,11 @@
 
 void print(void *base, size_t nitems, size_t size, int (*prt)(const void *))
 {
-    char *puntero_base = (char *)base;
 
-    for(size_t i = 0; i < nitems; i++)
+    size_t i;
+    for(i = 0; i < nitems; i++)
     {
-        void *puntero_elemento = puntero_base + (i * size);
-        
-        prt(puntero_elemento);
+        prt();
     }
 }
 
