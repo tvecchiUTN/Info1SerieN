@@ -1,0 +1,37 @@
+# Archivos ejecutables de C
+*.exe
+*.out
+a.out
+*.o
+*.obj
+
+# Archivos ejecutables sin extensión (comunes en Linux/Mac)
+main
+program
+test
+Act1/main
+Act2/main
+Act3/main
+Act4/main
+
+# Archivos de depuración
+*.dSYM/
+*.pdb
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de editor
+*.swp
+*.swo
+*~
+.vscode/
+*.tmp
+
+# Archivos de compilación
+*.a
+*.so
+*.dll
+*.dylib
+core

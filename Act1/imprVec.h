@@ -9,7 +9,7 @@
  * @param size Tamaño en bytes de cada elemento del array.
  * @param prt Función que imprime un elemento del array.
  */
-void print(void *base, size_t nitems, size_t size, int (*prt)(const void *));
+void print(const void *base, size_t nitems, size_t size, int (*prt)(const void *));
 
 /**
  * @brief Imprime datos tipo entero

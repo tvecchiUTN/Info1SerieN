@@ -1,13 +1,16 @@
 #include <stdio.h>
 #include "imprVec.h"
 
-void print(void *base, size_t nitems, size_t size, int (*prt)(const void *))
+void print(const void *base, size_t nitems, size_t size, int (*prt)(const void *))
 {
+    char *punteroBase = (char *)base;
 
     size_t i;
     for(i = 0; i < nitems; i++)
     {
-        prt();
+        void *punteroItem = punteroBase + (i * size);
+
+        prt(punteroItem);
     }
 }
 
