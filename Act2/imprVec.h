@@ -10,7 +10,7 @@
  * @param cond Función para incluir alguna condicion.
  * @return Cantidad de elementos impresos
  */
-size_t print(void *base, size_t nitems, size_t size, int (*prt)(const void *), int (*cond)(const void *));
+size_t printCond(void *base, size_t nitems, size_t size, int (*prt)(const void *), int (*cond)(const void *));
 
 /**
  * @brief Imprime datos tipo entero

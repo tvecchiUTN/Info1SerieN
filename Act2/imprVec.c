@@ -1,32 +1,21 @@
 #include <stdio.h>
 #include "imprVec.h"
 
-size_t print(void *base, size_t nitems, size_t size, int (*prt)(const void *), int (*cond)(const void *))
+size_t printCond(void *base, size_t nitems, size_t size, int (*prt)(const void *), int (*cond)(const void *))
 {
     size_t cuenta = 0;
-    if(cond == NULL)
-    {
-        char *puntero_base = (char *)base;
+    char *puntero_base = (char *)base;
 
-        for(size_t i = 0; i < nitems; i++)
-        {
-            void *puntero_elemento = puntero_base + (i * size);
-            
-            prt(puntero_elemento);
-            cuenta++;
-        }
-    }
-    else
+    for(size_t i = 0; i < nitems; i++)
     {
-        char *puntero_base = (char *)base;
-
-        for(size_t i = 0; i < nitems; i++)
+        void *puntero_elemento = puntero_base + (i * size);
+        
+        // Si no hay condición O si la condición se cumple
+        if(!cond || cond(puntero_elemento))
         {
-            void *puntero_elemento = puntero_base + (i * size);
-            
-            if(cond(puntero_elemento))
+            // Solo cuenta si la impresión fue exitosa
+            if(!prt(puntero_elemento))
             {
-                prt(puntero_elemento);
                 cuenta++;
             }
         }
