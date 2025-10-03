@@ -4,6 +4,7 @@
 a.out
 *.o
 *.obj
+out
 
 # Archivos ejecutables sin extensión (comunes en Linux/Mac)
 main

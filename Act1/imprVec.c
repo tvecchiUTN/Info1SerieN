@@ -28,13 +28,13 @@ int printFloat(const void *vec)
 
 int printMat(const void *vec)
 {
-    printf("%s\n", (char*)vec);
+    char **mat = (char**)vec;
+    printf("%s", *mat);
     return 0;
 }
 
 int printString(const void *vec)
 {
-    printf("%s", (char*)vec);
-    printf("\n");
+    printf("%s\n", (char*)vec);
     return 0;
 }
