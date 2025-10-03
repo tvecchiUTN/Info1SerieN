@@ -3,7 +3,7 @@
 #include <sys/types.h>
 #include "imprVec.h"
 
-void print(void *base, size_t nitems, size_t size, int (*prt)(const void *), double (*getValue)(const void *))
+void printProm(void *base, size_t nitems, size_t size, int (*prt)(const void *), double (*getValue)(const void *))
 {
     char *puntero_base = (char *)base;
     double suma = 0;
